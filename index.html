@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Birthday</title>
+    <style>
+        body {
+            background-color: #1e1934;
+        }
+        h1 {
+            position: fixed;
+            margin: 0 auto;
+            top: 50%;
+            left: 0;
+            right: 0;
+            width: 12em;
+            text-align: center;
+            font-size: 2em;
+            font-weight: 100;
+            font-family: "Sacramento";
+            letter-spacing: 0.1em;
+            color: white;
+            text-shadow: 0 0 20px black;
+            opacity: 0.8;
+        }
+
+        #yes {
+            position: fixed;
+            top: 70%; /* Just below the h1 */
+            left: 45%;
+            transform: translateX(-50%);
+            color: white;
+            background-color: rgb(234, 201, 67);
+            margin: 20px;
+            padding: 10px 20px;
+            border: 3px solid rgb(234, 201, 67);
+            border-radius: 13px;
+            cursor: pointer;
+            font-size: 30px;
+        }
+
+        #no {
+            top: 60%;
+            left: 35%;
+            color: white;
+            background-color: rgb(196, 68, 200);
+            margin: 20px;
+            padding: 10px;
+            border: 3px solid rgb(196, 68, 200);
+            border-radius: 13px;
+            /* width: 70px;
+            height: 30px; */
+            cursor: pointer;
+            position: absolute;
+            font-size: 30px;
+
+        }
+        img{
+            margin-top:150px;
+            margin-left: 50px;
+            display: block;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://i.pinimg.com/originals/8d/d3/ed/8dd3ed839851364b5653440ee4a6a5a9.gif" alt="Funny GIF" width="300">
+    <h1 id="head">Did you like the present?</h1>
+    <button id="yes" onclick="window.location.href='HBD.html'">the best present ever</button>
+    <button id="no" onclick="fx()">yes</button>
+</body>
+<script>
+    const yesbtn = document.getElementById("yes");
+    const heading = document.getElementById("head");
+
+    
+    function fx() {
+        const btn = document.getElementById('no');
+        const x = Math.floor(Math.random() * 200) + 1; // Adjusted the random range to keep the button within the container
+        const y = Math.floor(Math.random() * 200) + 1; // Adjusted the random range to keep the button within the container
+        btn.style.top = x + "px";
+        btn.style.left = y + "px";
+    }
+</script>
+
+</html>
